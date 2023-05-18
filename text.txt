@@ -69,6 +69,16 @@ Github 远程仓库的两种访问方式
     provide shell access.
 
 
+上传到远程仓库比如：
+git remote add origin git@github.com:wang1537623213/project_02.git
+git branch -M main
+git push -u origin main
+即可
+
+如果 2次上传只需：
+git push 即可
+
+
 将远程仓库克隆到本地
 打开Git Bash，输入如下的命令并回车执行:
   git clone 远程仓库的地址
