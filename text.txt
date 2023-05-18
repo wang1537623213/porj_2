@@ -128,3 +128,28 @@ git reset --merge
 
 删除分支
 git branch -D 分支名称
+
+
+遇到冲突时的分支合并
+
+比如：
+wang1@▒ҵĻ▒˶ MINGW64 /d/旧/readme/git/porj_2 (master)
+$ git merge reg
+Auto-merging text.txt
+CONFLICT (content): Merge conflict in text.txt
+Auto-merging login.html
+CONFLICT (content): Merge conflict in login.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+wang1@▒ҵĻ▒˶ MINGW64 /d/旧/readme/git/porj_2 (master|MERGING)
+
+
+
+如果在两个不同的分支中，对同一个文件进行了不同的修改，Git就没法干净的合并它们。此时，我们需要打开这些包含冲突的文件然后手动解决冲突
+# 假设：在吧 reg 分支合并到 master 分支期间，代码发生了冲突
+git checkout master
+git merge reg
+
+# 打开包含冲突的文件，手动解决冲突之后，在执行如下命令：
+git add .
+git commit -m "解决了分支合并冲突的问题"
