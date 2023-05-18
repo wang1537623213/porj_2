@@ -130,7 +130,7 @@ git reset --merge
 git branch -D 分支名称
 
 
-遇到冲突时的分支合并
+** 遇到冲突时的分支合并
 
 比如：
 wang1@▒ҵĻ▒˶ MINGW64 /d/旧/readme/git/porj_2 (master)
