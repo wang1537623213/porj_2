@@ -110,3 +110,15 @@ git branch 分支名称
 
 切换分支
 git checkout 分支名称
+
+
+分支的快速创建和却换
+# -b 表示创建一个新的分支
+# checkout 表示切换到刚才新建的分支上
+git checkout -b 分支名称
+
+合并分支
+# 1.切换到 master 分支
+git checkout master
+# 2.在 master 分支上运行 git merge 命令，将 login 分支的代码合并到 master 分支
+git merge login
