@@ -127,4 +127,4 @@ git merge login
 git reset --merge
 
 删除分支
-git branch -d 分支名称
+git branch -D 分支名称
