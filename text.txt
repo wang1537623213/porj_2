@@ -122,3 +122,9 @@ git checkout -b 分支名称
 git checkout master
 # 2.在 master 分支上运行 git merge 命令，将 login 分支的代码合并到 master 分支
 git merge login
+
+撤销合并
+git reset --merge
+
+删除分支
+git branch -d 分支名称
