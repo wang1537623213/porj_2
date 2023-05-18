@@ -47,3 +47,28 @@
 Github 远程仓库的两种访问方式
 1.HTTPS：零配置；但是每次访问仓库时，需要重复输入 Githob 的账号和密码才能访问成功
 2.SSH：需要进行额外的配置；但是配置成功后，每次访问仓库时，不需要重复输入 Githob 的账号和密码
+
+
+生成SSH key
+1.打开Git Bash
+2.ssh-keygen -t rsa -b 4096 -C "邮箱"
+3.连续敲击3次回车，即可在C:\Users\用户名文件夹\.ssh目录中生成 id_rsa和id_rsa.pub两个文件
+
+
+检测Github 的SSH key是否配置成功
+  1.打开Git Bash，输入如下的命令并回车执行:
+  ssh -T git@github.com
+
+  2.上述的命令执行成功后，可能会看到如下的提示消息:
+   The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+   RSA key fingerprint is SHA256:nThbg6kXUpJMG17E1IGOCSpRomTxdCARLviKw6E5SY8.
+   Are you sure you want to continue connecting (yes/no)?
+
+  3.输入yes 之后，如果能看到类似于下面的提示消息，证明SSH key已经配置成功了:
+    Hi username! You've successfully authenticated,but GitHub does not
+    provide shell access.
+
+
+将远程仓库克隆到本地
+打开Git Bash，输入如下的命令并回车执行:
+  git clone 远程仓库的地址
